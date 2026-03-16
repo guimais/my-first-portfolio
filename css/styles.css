@@ -974,6 +974,80 @@ body.cursor-hover .cursor {
   transform: translateY(-4px);
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,24,22,.75);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__box {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  max-width: 1400px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transform: translateY(24px);
+  transition: transform var(--transition);
+  box-shadow: 0 40px 100px rgba(26,24,22,.3);
+}
+
+.modal.open .modal__box {
+  transform: translateY(0);
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.modal__close svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ink);
+}
+
+.modal__close:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.modal__close:hover svg {
+  color: var(--bg);
+}
+
+.modal__box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 @media (max-width: 1024px) {
   .about__grid { grid-template-columns: 360px 1fr; gap: 60px; }
   .skills__grid { grid-template-columns: repeat(2, 1fr); }

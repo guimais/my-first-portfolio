@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  const backToTop = document.getElementById('backToTop');
+  const backToTop  = document.getElementById('backToTop');
   const nav        = document.getElementById('nav');
   const navToggle  = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -12,11 +12,37 @@ document.addEventListener('DOMContentLoaded', function () {
   const bgText     = document.querySelector('.hero__bg-text');
   const form       = document.getElementById('contactForm');
   const yr         = document.getElementById('year');
+  const modal      = document.getElementById('projectModal');
+  const modalIframe = document.getElementById('modalIframe');
+  const openModal  = document.getElementById('openModal');
+  const modalClose = document.getElementById('modalClose');
 
   if (yr) yr.textContent = new Date().getFullYear();
 
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  openModal.addEventListener('click', () => {
+    modalIframe.src = 'https://guimais.github.io/mapslink/';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  const closeModal = () => {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => { modalIframe.src = ''; }, 420);
+  };
+
+  modalClose.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
   });
 
   let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
@@ -181,4 +207,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
-
