@@ -1,50 +1,262 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guilherme C. Mais — Dev Front-end</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-<html>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
 
-	<head>
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo"><span class="logo-bracket">&lt;</span>Guilherme C. Mais — Portfólio<span class="logo-bracket">/&gt;</span></a>
+    <ul class="nav__links">
+      <li><a href="#about" class="nav__link">Sobre</a></li>
+      <li><a href="#skills" class="nav__link">Skills</a></li>
+      <li><a href="#projects" class="nav__link">Projetos</a></li>
+      <li><a href="#contact" class="nav__link">Contato</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-		<title>Guilherme C. Mais - Portfolio Online</title>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">Sobre</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projetos</a></li>
+      <li><a href="#contact" class="mobile-link">Contato</a></li>
+    </ul>
+  </div>
 
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
-		<script type="text/javascript" src="js/scripts.js"></script>
+  <section class="hero" id="hero">
+    <div class="hero__bg-text">FRONT-END</div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Olá, eu sou</p>
+      <h1 class="hero__name"><em>Guilherme C. Mais</em></h1>
+      <p class="hero__role">Desenvolvedor <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span></p>
+      <p class="hero__desc">Crio interfaces digitais com atenção obsessiva aos detalhes, performance e experiência do usuário.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+        <a href="#contact" class="btn btn--outline">Entre em Contato</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-	</head>
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrap">
+          <div class="about__image-frame">
+            <img src="imagens/IMG_1118.PNG" alt="Foto de perfil" class="about__img" />
+            <div class="about__badge">
+              <span class="badge-num">2+</span>
+              <span class="badge-text">Anos de<br/>experiência</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__text">
+          <span class="section-label">Sobre mim</span>
+          <h2 class="section-title">Apaixonado por criar<br /><em>experiências digitais</em></h2>
+          <p class="about__p">Sou um desenvolvedor front-end focado em construir interfaces limpas, acessíveis e de alto desempenho. Acredito que bom código e bom design andam lado a lado.</p>
+          <p class="about__p">Trabalho com as tecnologias mais modernas do mercado, sempre buscando soluções criativas e eficientes para cada desafio.</p>
+          <div class="about__stats">
+            <div class="stat"><span class="stat__num">15+</span><span class="stat__label">Projetos</span></div>
+            <div class="stat"><span class="stat__num">100%</span><span class="stat__label">Dedicação</span></div>
+            <div class="stat"><span class="stat__num">5★</span><span class="stat__label">Qualidade</span></div>
+          </div>
+          <div class="about__socials">
+            <a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <img src="imagens/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <img src="imagens/linkedln.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Tecnologias</span>
+        <h2 class="section-title">Minhas <em>Skills</em></h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-card">
+          <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3 class="skill-card__name">HTML5</h3>
+          <div class="skill-bar"><div class="skill-bar__fill" data-width="95"></div></div>
+          <span class="skill-card__percent">95%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <h3 class="skill-card__name">CSS3</h3>
+          <div class="skill-bar"><div class="skill-bar__fill" data-width="90"></div></div>
+          <span class="skill-card__percent">90%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h3 class="skill-card__name">JavaScript</h3>
+          <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
+          <span class="skill-card__percent">85%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 12l9-3"/><path d="M12 2v10"/></svg></div>
+          <h3 class="skill-card__name">React</h3>
+          <div class="skill-bar"><div class="skill-bar__fill" data-width="75"></div></div>
+          <span class="skill-card__percent">75%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
+          <h3 class="skill-card__name">Git & GitHub</h3>
+          <div class="skill-bar"><div class="skill-bar__fill" data-width="80"></div></div>
+          <span class="skill-card__percent">80%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9"/><path d="M18 3v6h-6"/></svg></div>
+          <h3 class="skill-card__name">Figma</h3>
+          <div class="skill-bar"><div class="skill-bar__fill" data-width="70"></div></div>
+          <span class="skill-card__percent">70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<body>
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Trabalhos</span>
+        <h2 class="section-title">Projetos em <em>Destaque</em></h2>
+      </div>
+      <div class="projects__grid--single">
+        <article class="project-card project-card--featured">
+          <div class="project-card__img-wrap">
+            <div class="project-card__img project-card__img--mapslink">
+              <img src="imagens/Logo Final - Maps Link.png" alt="MapsLink" class="project-card__cover" />
+            </div>
+            <div class="project-card__overlay">
+              <a href="#" class="project-link" aria-label="Ver projeto ao vivo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="#" class="project-link" aria-label="Ver código no GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <div class="project-card__meta">
+              <div class="project-card__tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Leaflet.js</span>
+                <span class="tag">PWA</span>
+                <span class="tag">Figma</span>
+              </div>
+              <span class="project-card__year">2025 · PUC-Campinas</span>
+            </div>
+            <h3 class="project-card__title">MapsLink</h3>
+            <p class="project-card__desc">Plataforma web de empregabilidade e networking B2B com <strong>mapa interativo geolocalizado</strong>. Permite descobrir empresas, vagas de emprego e eventos diretamente no mapa, com filtros dinâmicos por setor, cidade e palavra-chave, tudo sem recarregar a página. Desenvolvido em equipe com metodologia ágil (Scrum/Jira), prototipagem no Figma e deploy via GitHub Pages.</p>
+            <ul class="project-card__highlights">
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Mapa interativo com Leaflet.js + OpenStreetMap</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Filtros em tempo real por setor, cidade e keywords</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Arquitetura SPA, PWA-ready e 100% responsivo</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Score Lighthouse Acessibilidade &gt; 95%</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-			<div id="navigation" class="navigation">
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__left">
+          <span class="section-label">Contato</span>
+          <h2 class="section-title">Vamos trabalhar<br /><em>juntos?</em></h2>
+          <p class="contact__desc">Estou disponível para projetos freelance, oportunidades de emprego e colaborações. Manda uma mensagem!</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>guicarvalhomais@gmail.com</span>
+            </div>
+            <div class="contact__info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Brasil — Disponível Remotamente</span>
+            </div>
+          </div>
+          <div class="contact__socials">
+            <a href="https://www.instagram.com/gui_.mais/" target="_blank" rel="noopener" class="icon-link" aria-label="Instagram">
+              <img src="imagens/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/in/guilheme-carvalho-mais" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
+              <img src="imagens/linkedln.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Ex: Projeto freelance" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Conte-me sobre seu projeto..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span>Enviar Mensagem</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">✓ Mensagem enviada! Retornarei em breve.</div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-				<ul>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#hero" class="footer__logo"><span class="logo-bracket">&lt;</span>Guilherme C. Mais - Portfólio<span class="logo-bracket">/&gt;</span></a>
+        <p class="footer__copy">&copy; <span id="year"></span> Guilherme Carvalho Mais. Todos os direitos reservados.</p>
+        <div class="footer__links">
+          <a href="#about">Sobre</a>
+          <a href="#projects">Projetos</a>
+          <a href="#contact">Contato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-					<li><a href="index.html">Home</a></li>
-					<li><a href="PaginaPortifolio.html">Portfolio</a></li>
-					<li><a href="PaginaCurriculo.html">Currículo</a></li>
-					<li><a href="PaginaContato.html">Contato</a></li>
-					<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
-				</ul>
-
-			</div>
-
-			<div class="capa">
-
-                <div class="profile-pic"> 
-
-                    <img src="imagens/foto-portfolio.jpg" alt="Foto de Guilherme C. Mais">
-
-                </div>
-
-                <div class="profile-title">
-
-                    <h1>Guilherme <span>Carvalho Mais</span> </h1>
-					<h2>Engenheiro da Computação - Desenvolvedor Web - Gestor de Equipes</h2>
-                </div>
-
-			</div>
-
-	</body>
-
+  <script src="js/scripts.js"></script>
+</body>
 </html>
