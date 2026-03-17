@@ -12,10 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const bgText     = document.querySelector('.hero__bg-text');
   const form       = document.getElementById('contactForm');
   const yr         = document.getElementById('year');
-  const modal      = document.getElementById('projectModal');
-  const modalIframe = document.getElementById('modalIframe');
-  const openModal  = document.getElementById('openModal');
-  const modalClose = document.getElementById('modalClose');
 
   if (yr) yr.textContent = new Date().getFullYear();
 
@@ -23,26 +19,36 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  openModal.addEventListener('click', () => {
-    modalIframe.src = 'https://guimais.github.io/mapslink/';
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-
-  const closeModal = () => {
+  const closeModal = (modal) => {
     modal.classList.remove('open');
     document.body.style.overflow = '';
-    setTimeout(() => { modalIframe.src = ''; }, 420);
+    setTimeout(() => { modal.querySelector('iframe').src = ''; }, 420);
   };
 
-  modalClose.addEventListener('click', closeModal);
+  document.querySelectorAll('[data-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal  = document.getElementById(btn.getAttribute('data-open'));
+      const iframe = modal.querySelector('iframe');
+      iframe.src = btn.getAttribute('data-src');
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
 
-  modal.addEventListener('click', e => {
-    if (e.target === modal) closeModal();
+  document.querySelectorAll('.modal__close').forEach(btn => {
+    btn.addEventListener('click', () => closeModal(btn.closest('.modal')));
+  });
+
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal(modal);
+    });
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.open').forEach(modal => closeModal(modal));
+    }
   });
 
   let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
