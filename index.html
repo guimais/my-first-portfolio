@@ -41,6 +41,15 @@
     </div>
   </div>
 
+  <div class="modal" id="modalDashboard">
+    <div class="modal__box">
+      <button class="modal__close" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <iframe src="" title="Dashboard React" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <nav class="nav" id="nav">
     <a href="#hero" class="nav__logo"><span class="logo-bracket">&lt;</span>Guilherme C. Mais — Portfólio<span class="logo-bracket">/&gt;</span></a>
     <ul class="nav__links">
@@ -99,7 +108,7 @@
           <p class="about__p">Sou um desenvolvedor front-end focado em construir interfaces limpas, acessíveis e de alto desempenho. Acredito que bom código e bom design andam lado a lado.</p>
           <p class="about__p">Trabalho com as tecnologias mais modernas do mercado, sempre buscando soluções criativas e eficientes para cada desafio.</p>
           <div class="about__stats">
-            <div class="stat"><span class="stat__num">3+</span><span class="stat__label">Projetos</span></div>
+            <div class="stat"><span class="stat__num">4+</span><span class="stat__label">Projetos</span></div>
             <div class="stat"><span class="stat__num">100%</span><span class="stat__label">Dedicação</span></div>
             <div class="stat"><span class="stat__num">5★</span><span class="stat__label">Qualidade</span></div>
           </div>
@@ -361,6 +370,96 @@
               <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Carrossel de depoimentos e acordeão de FAQ</li>
               <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Formulário com máscara de telefone e validação</li>
               <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>JSON-LD para SEO e semântica HTML acessível</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__img-wrap">
+            <div class="project-card__img project-card__img--dashboard">
+              <svg class="dashboard-illustration" viewBox="0 0 520 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="520" height="300" fill="#0a0f1e"/>
+                <rect x="0" y="0" width="100" height="300" fill="#0d1426"/>
+                <rect x="16" y="24" width="68" height="28" rx="6" fill="rgba(99,179,237,.15)"/>
+                <text x="28" y="43" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(99,179,237,.8)">NEXUS</text>
+                <rect x="16" y="72" width="68" height="20" rx="4" fill="rgba(99,179,237,.2)"/>
+                <rect x="22" y="78" width="8" height="8" rx="2" fill="rgba(99,179,237,.6)"/>
+                <text x="34" y="86" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.7)">Visão Geral</text>
+                <rect x="16" y="98" width="68" height="20" rx="4" fill="transparent"/>
+                <rect x="22" y="104" width="8" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
+                <text x="34" y="112" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Análises</text>
+                <rect x="16" y="122" width="68" height="20" rx="4" fill="transparent"/>
+                <rect x="22" y="128" width="8" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
+                <text x="34" y="136" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Pedidos</text>
+                <rect x="16" y="146" width="68" height="20" rx="4" fill="transparent"/>
+                <rect x="22" y="152" width="8" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
+                <text x="34" y="160" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Equipe</text>
+                <rect x="16" y="170" width="68" height="20" rx="4" fill="transparent"/>
+                <rect x="22" y="176" width="8" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
+                <text x="34" y="184" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Config.</text>
+                <rect x="116" y="20" width="96" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
+                <text x="128" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">RECEITA</text>
+                <text x="128" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="white">R$248k</text>
+                <rect x="220" y="20" width="96" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
+                <text x="232" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">PEDIDOS</text>
+                <text x="232" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="white">1.284</text>
+                <rect x="324" y="20" width="96" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
+                <text x="336" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">CLIENTES</text>
+                <text x="336" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="white">3.741</text>
+                <rect x="428" y="20" width="76" height="52" rx="8" fill="rgba(99,179,237,.08)" stroke="rgba(99,179,237,.15)" stroke-width="1"/>
+                <text x="440" y="38" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">CONVERSÃO</text>
+                <text x="440" y="56" font-family="sans-serif" font-size="16" font-weight="700" fill="#68d391">4.2%</text>
+                <rect x="116" y="84" width="268" height="120" rx="8" fill="rgba(99,179,237,.05)" stroke="rgba(99,179,237,.12)" stroke-width="1"/>
+                <text x="128" y="100" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">RECEITA SEMANAL</text>
+                <polyline points="128,190 168,165 208,175 248,145 288,155 328,130 368,140" stroke="rgba(99,179,237,.6)" stroke-width="2" fill="none"/>
+                <polygon points="128,190 168,165 208,175 248,145 288,155 328,130 368,140 368,195 128,195" fill="rgba(99,179,237,.08)"/>
+                <line x1="128" y1="195" x2="368" y2="195" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+                <line x1="128" y1="170" x2="368" y2="170" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+                <line x1="128" y1="145" x2="368" y2="145" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+                <rect x="392" y="84" width="112" height="120" rx="8" fill="rgba(99,179,237,.05)" stroke="rgba(99,179,237,.12)" stroke-width="1"/>
+                <text x="404" y="100" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">CATEGORIAS</text>
+                <circle cx="448" cy="152" r="28" fill="none" stroke="rgba(99,179,237,.5)" stroke-width="8" stroke-dasharray="44 88"/>
+                <circle cx="448" cy="152" r="28" fill="none" stroke="rgba(104,211,145,.5)" stroke-width="8" stroke-dasharray="30 102" stroke-dashoffset="-44"/>
+                <circle cx="448" cy="152" r="28" fill="none" stroke="rgba(246,173,85,.4)" stroke-width="8" stroke-dasharray="14 118" stroke-dashoffset="-74"/>
+                <rect x="116" y="216" width="388" height="68" rx="8" fill="rgba(99,179,237,.05)" stroke="rgba(99,179,237,.12)" stroke-width="1"/>
+                <text x="128" y="232" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.35)">PEDIDOS RECENTES</text>
+                <rect x="128" y="240" width="364" height="10" rx="3" fill="rgba(255,255,255,.04)"/>
+                <rect x="128" y="255" width="364" height="10" rx="3" fill="rgba(255,255,255,.04)"/>
+                <rect x="128" y="242" width="60" height="6" rx="3" fill="rgba(255,255,255,.12)"/>
+                <rect x="128" y="257" width="48" height="6" rx="3" fill="rgba(255,255,255,.08)"/>
+                <rect x="420" y="241" width="40" height="8" rx="4" fill="rgba(104,211,145,.25)"/>
+                <text x="428" y="249" font-family="sans-serif" font-size="7" fill="rgba(104,211,145,.8)">Pago</text>
+                <rect x="420" y="254" width="40" height="8" rx="4" fill="rgba(246,173,85,.25)"/>
+                <text x="424" y="262" font-family="sans-serif" font-size="7" fill="rgba(246,173,85,.8)">Pendente</text>
+                <text x="116" y="292" font-family="sans-serif" font-size="9" font-weight="600" fill="rgba(99,179,237,.2)">Nexus Corp — Dashboard</text>
+              </svg>
+            </div>
+            <div class="project-card__overlay">
+              <button class="project-link" data-open="modalDashboard" data-src="https://guimais.github.io/dashboard-em-react/" aria-label="Ver projeto ao vivo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </button>
+              <a href="https://github.com/guimais/dashboard-em-react" target="_blank" rel="noopener" class="project-link" aria-label="Ver código no GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <div class="project-card__meta">
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Vite</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">SVG</span>
+              </div>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h3 class="project-card__title">Nexus Corp Dashboard</h3>
+            <p class="project-card__desc">Dashboard empresarial completo em <strong>React 18</strong> para a empresa fictícia Nexus Corp. KPIs, gráficos SVG puros, tabela de pedidos, gestão de equipe e configurações, tudo sem bibliotecas externas de UI.</p>
+            <ul class="project-card__highlights">
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Gráficos em SVG puro — sem bibliotecas externas</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>useState, useMemo e useEffect aplicados</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Sidebar fixa com 5 seções e busca/filtro de dados</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3 8 6 11 13 4"/></svg>Build com Vite e deploy via GitHub Pages</li>
             </ul>
           </div>
         </article>
